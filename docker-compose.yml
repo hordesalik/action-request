@@ -1,0 +1,11 @@
+services:
+  action-request:
+    hostname: action-request
+    build:
+      dockerfile: ./dev.Dockerfile
+    ports:
+      - 3001:80
+    volumes:
+      - ./src:/src
+    environment:
+      SHORT_TIME_CODE_API_ORIGIN: http://short-time-code:80
